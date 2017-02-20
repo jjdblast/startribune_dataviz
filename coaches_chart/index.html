@@ -21,7 +21,7 @@
     }
     
     .c3 text {
-        font-family: "Open Sans", sans-serif;
+        font-family: "Benton Sans", sans-serif;
     }
     .c3-tooltip {
         -webkit-box-shadow: 0px !important;
@@ -42,38 +42,57 @@
         margin: auto;
         text-align: center;
         display: block;
+      margin: 20px 0 10px 0;
     }
     
     button {
-        font-family: "Open Sans", sans-serif;
+        font-family: "Benton Sans", sans-serif;
         color: #000000;
         font-size: small;
-        background: #9EE384;
-        padding: 3px;
+        background: #ddd;
+        border-radius:4px;
+        padding-top: 8px;
+      padding-bottom: 8px;
+      padding-left: 12px;
+      padding-right: 12px;
         border: 0px;
         text-decoration: none;
         display: inline-block;
     }
     
     button:hover {
-        background: #118241;
+        background: #999;
         color: #ffffff;
     }
     
     .active {
-        background: #118241;
+        background: #666;
         color: #ffffff;
     }
+      
+    .coachBtn {
+      background-color:#66af50;
+      color:#fff;}
+     
+    .playerBtn {
+      background-color:#bf603c;
+      color:#fff;
+      margin-right:10px;}     
+     
+      
+      
     #title {
         text-align: center;
-        font-family: "Open Sans", sans-serif;
-        font-size: large;
+        font-family: "Benton", sans-serif;
+        font-size: 22px;
+      
     }
     #footnote {
-        font-family: "Open Sans", sans-serif;
+        font-family: "Benton Sans", sans-serif;
         font-size: x-small;
         clear: left;
         padding-left: 2.4%;
+      margin: 12px auto;
     }    
     </style>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.js"></script>
@@ -85,9 +104,9 @@
 
 <body>
     <div id="title">Percentage of nonwhite Divison I men's basketball coaches in six largest conferences</div>
-    <div id="chart" style="height:410px;"></div>
-    <div id="footnote">Player data provided by the NCAA. Only the years 1999 to 2015 were available.</div>
     <div id="button-wrapper">
+        <button onclick="" class="coachBtn">Coaches</button>
+        <button onclick="" class="playerBtn">Players</button>
         <button onclick="updateAll()">All Conferences</button>
         <button onclick="updateBigTen()">Big Ten</button>
         <button onclick="updateSEC()">SEC</button>
@@ -96,6 +115,12 @@
         <button onclick="updateBigEast()">Big East</button>
         <button onclick="updateBig12()">Big 12</button>
     </div>
+  
+    <div id="chart" style="height:410px;"></div>
+  
+  
+    <div id="footnote">Player data provided by the NCAA. Only the years 1999 to 2015 were available.</div>
+
 </body>
 <script>
     $('button').click(function() {
