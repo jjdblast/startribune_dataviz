@@ -25,13 +25,14 @@
     }
     
     #container {
+      width:100%;
         margin: auto;
         display: block;
       min-height:540px;
     }
     
     body {
-        width: 970px;
+/*        width: 970px;*/
         margin-right: auto;
         margin-left: auto;
         font-family: "Benton Sans", sans-serif;
@@ -60,7 +61,7 @@
       text-align:left;
       font-weight: bold;
       font-size: .75em;
-      min-width: 19px;
+      min-width: 18px;
     }
       
     .coachKeys {
@@ -200,15 +201,42 @@
         color: white;
     }
     
-     @media only screen and (max-width: 800px) {
+     @media only screen and (max-width: 758px) {
         body {
-            font-size: 75%;
+            font-size: 85%;
             width: 800px;
         }
+/*
         button {
             font-size: 75%;
             padding: 1px;
         }
+*/
+       
+    button {
+        font-family: "Benton Sans", sans-serif;
+        color: #000000;
+        font-size: small;
+        background: #ddd;
+        border-radius:4px;
+        padding-top: 6px;
+      padding-bottom: 6px;
+      padding-left: 10px;
+      padding-right: 10px;
+        border: 0px;
+        text-decoration: none;
+        display: inline-block;
+    }
+       
+       
+           th {
+      text-align:left;
+      font-weight: bold;
+      font-size: .4em;
+      min-width: 11px;
+    }
+       
+       
         .rectangles {
             width: 12px;
             height: 12px;
@@ -255,48 +283,33 @@
 </head>
 
 <body>
-    <div id="title">Diversity among Division I men's basketball coaches</div>  
-        <div id="intro">Explore the racial makeup of coaches in the six largest conferences. The Star Tribune used media guides from each school and reviewed photos of the coaches to determine whether a coach was white or nonwhite. Click on the name of a conference to change which schools are displayed.</div>
+  
+<div id="title">Diversity among Division I men's basketball coaches</div>  
+<div id="intro">Explore the racial makeup of coaches in the six largest conferences. The Star Tribune used media guides from each school and reviewed photos of the coaches to determine whether a coach was white or nonwhite. Click on the name of a conference to change which schools are displayed.</div>
+  
         <div id="button-wrapper">
-          
-          
 <div class="coachKeys">
-<div class="square" id="square-black"></div> Non-white</div> 
+<div class="square" id="square-black"></div>Non-white</div> 
 <div class="coachKeys">  
-<div class="square" id="square-white"></div> White
+<div class="square" id="square-white"></div>White
 </div>
 <div class="coachKeys">  
-<div class="square" id="square-none"></div> School not in conference
+<div class="square" id="square-none"></div>School not in conference
 </div>
           
-          
-          
-          
-          
-          
-          
-          
-            <button onclick="updateBigTen()" class="active">Big Ten</button>
-            <button onclick="updateSEC()">SEC</button>
-            <button onclick="updateACC()">ACC</button>
-            <button onclick="updatePac12()">Pac 12</button>
-            <button onclick="updateBigEast()">Big East</button>
-            <button onclick="updateBig12()">Big 12</button>
-        </div>
-  
-
-  
-<!--
-        <div class="legend">
-            <div class="rectangles" id="rectangle-black"></div> Not white
-            <div class="rectangles" id="rectangle-white"></div> White
-            <div class="rectangles" id="rectangle-none"></div> School not in conference
-        </div>
--->
+<button onclick="updateBigTen()" class="active">Big Ten</button>
+<button onclick="updateSEC()">SEC</button>
+<button onclick="updateACC()">ACC</button>
+<button onclick="updatePac12()">Pac 12</button>
+<button onclick="updateBigEast()">Big East</button>
+<button onclick="updateBig12()">Big 12</button>
+</div>
   
     </div>
     <div id="container"></div>
     <div class="footnote">Each column includes the schools that were in the conferences for that year. Each year represents the year the season began. For example, the column marked '80 represents the 1980-1981 season. Schools in the Big 8, which became the Big 12 in 1996, are included under the Big 12. Graphic by Ethan Nelson, a University of Minnesota student reporter on assignment for Star Tribune.</div>
+
+
    <script>
     $('button').click(function() {
         $('button').removeClass('active')
