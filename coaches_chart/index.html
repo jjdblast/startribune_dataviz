@@ -24,6 +24,7 @@
         font-family: "Benton Sans", sans-serif;
     }
     .c3-tooltip {
+        font-family: "Benton Sans", sans-serif;
         -webkit-box-shadow: 0px !important;
         box-shadow: 0px 0px 0px 0px !important;
         opacity: 1 !important;        
@@ -31,9 +32,7 @@
     th {
         display: none;
     }
-/*    td.name {
-        display: none;
-    }*/
+
     td.value {
         font-weight: bold;
     }
@@ -56,11 +55,11 @@
     }
 
     #square-coach {
-      background: #66af50;
+      background: #BF603C;
     }
 
     #square-player {
-      background: #bf603c;
+      background: #999999;
       margin-left:1.5em;  
     }
   
@@ -118,8 +117,11 @@
       line-height:150%;
       margin:.5em auto;
     }
-      
+
+    #chart {display:block;min-height:410px;}  
+ 
     #footnote {
+      display:block;
       font-family: "Benton Sans", sans-serif;
       font-size: small;
       clear: left;
@@ -127,7 +129,48 @@
       margin: 12px auto;
     }  
 
+ 
+@media only screen and (max-width: 769px) {
+  
+    #button-wrapper {float:left;width:100%;margin:0;}
+
+    .keyBlock {float:left;width:100%;margin-bottom:.5em;margin-left:30%;}
+  
+    .coachKeys {font-size:.9em;}
+
+    .btnBlock {float:left;width:100%;margin-bottom:0em;}   
+
+    button {margin-bottom:.5em;}  
+
+    #chart {display:block;min-height:410px;} 
+
+}      
+      
+      
+      
+@media only screen and (max-width: 500px) {
+  
+    body {width:100%;margin:10px auto;}
+
+    #button-wrapper {float:left;width:100%;margin:0;}
+
+    #square-player {margin-left:1em;}
+
+    .keyBlock {float:left;width:100%;margin: 0 auto .5em auto;}
+  
+    .coachKeys {font-size:.85em;}
+
+    .btnBlock {float:left;width:100%;margin-bottom:0em;}   
+
+    button {margin-bottom:.5em;}  
+
+    #chart {display:block;min-height:300px;}  
+  
+}
+  
     </style>
+  
+  
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.1.29/c3.js"></script>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
@@ -137,18 +180,23 @@
 </head>
 
 <body>
+  
     <div id="title">Percentage of nonwhite Divison I men's basketball coaches in six largest conferences</div>
   
 <div id="intro">Voluptate soluta fugiat dolores ea incidunt voluptas expedita harum. Repellat occaecati non voluptates qui odit eveniet iusto est. Ducimus facilis mollitia sunt. Voluptatum officiis animi et facilis vel quaerat.</div>
   
-    <div id="button-wrapper">
-    
-<div class="coachKeys">
-<div class="square" id="square-coach"></div> Non-white coaches</div> 
-<div class="coachKeys">  
-<div class="square" id="square-player"></div> Non-white players
-</div>
+<div id="button-wrapper">
+  
+    <div class="keyBlock">      
+        <div class="coachKeys">
+        <div class="square" id="square-coach"></div>Non-white coaches
+        </div> 
+        <div class="coachKeys">  
+        <div class="square" id="square-player"></div>Non-white players
+        </div>
+    </div>      
       
+    <div class="btnBlock">      
         <button onclick="updateAll()" class="active">All Conferences</button>
         <button onclick="updateBigTen()">Big Ten</button>
         <button onclick="updateSEC()">SEC</button>
@@ -156,10 +204,13 @@
         <button onclick="updatePac12()">Pac 12</button>
         <button onclick="updateBigEast()">Big East</button>
         <button onclick="updateBig12()">Big 12</button>
+    </div>      
       
-    </div>
+</div>
   
-    <div id="chart" style="height:410px;"></div>
+<p style="margin:0;padding:0;">&nbsp;</p>
+  
+    <div id="chart"></div>
   
   
     <div id="footnote">Player data provided by the NCAA. Only the years 1999 to 2015 were available.</div>
@@ -197,7 +248,7 @@ var chart = c3.generate({
         }
     },
     color: {
-        pattern: ["#66AF50", "#BF603C"]
+        pattern: ["#BF603C", "#999999"]
     },
     legend: {
         show: false
