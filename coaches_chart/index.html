@@ -3,6 +3,9 @@
 <head>
     <title>All</title>
     <style>
+      
+    .coachOuter {width:100%;}  
+      
     .c3-line {
         stroke-width: 4px !important;
     }
@@ -181,40 +184,45 @@
 
 <body>
   
+<div class="coachOuter">
+  
     <div id="title">Percentage of nonwhite Divison I men's basketball coaches in six largest conferences</div>
-  
-<div id="intro">Voluptate soluta fugiat dolores ea incidunt voluptas expedita harum. Repellat occaecati non voluptates qui odit eveniet iusto est. Ducimus facilis mollitia sunt. Voluptatum officiis animi et facilis vel quaerat.</div>
-  
-<div id="button-wrapper">
-  
-    <div class="keyBlock">      
-        <div class="coachKeys">
-        <div class="square" id="square-coach"></div>Non-white coaches
-        </div> 
-        <div class="coachKeys">  
-        <div class="square" id="square-player"></div>Non-white players
-        </div>
-    </div>      
-      
-    <div class="btnBlock">      
-        <button onclick="updateAll()" class="active">All Conferences</button>
-        <button onclick="updateBigTen()">Big Ten</button>
-        <button onclick="updateSEC()">SEC</button>
-        <button onclick="updateACC()">ACC</button>
-        <button onclick="updatePac12()">Pac 12</button>
-        <button onclick="updateBigEast()">Big East</button>
-        <button onclick="updateBig12()">Big 12</button>
-    </div>      
-      
+
+    <div id="intro">Voluptate soluta fugiat dolores ea incidunt voluptas expedita harum. Repellat occaecati non voluptates qui odit eveniet iusto est. Ducimus facilis mollitia sunt. Voluptatum officiis animi et facilis vel quaerat.</div>
+
+    <div id="button-wrapper">
+
+        <div class="keyBlock">      
+            <div class="coachKeys">
+            <div class="square" id="square-coach"></div>Non-white coaches
+            </div> 
+            <div class="coachKeys">  
+            <div class="square" id="square-player"></div>Non-white players
+            </div>
+        </div>      
+
+        <div class="btnBlock">      
+            <button onclick="updateAll()" class="active">All Conferences</button>
+            <button onclick="updateBigTen()">Big Ten</button>
+            <button onclick="updateSEC()">SEC</button>
+            <button onclick="updateACC()">ACC</button>
+            <button onclick="updatePac12()">Pac 12</button>
+            <button onclick="updateBigEast()">Big East</button>
+            <button onclick="updateBig12()">Big 12</button>
+        </div>      
+
+    </div>
+
+    <p style="margin:0;padding:0;">&nbsp;</p>
+
+        <div id="chart"></div>
+
+
+        <div id="footnote">Player data provided by the NCAA. Only the years 1999 to 2015 were available.</div>
+
 </div>
   
-<p style="margin:0;padding:0;">&nbsp;</p>
   
-    <div id="chart"></div>
-  
-  
-    <div id="footnote">Player data provided by the NCAA. Only the years 1999 to 2015 were available.</div>
-
 </body>
 <script>
     $('button').click(function() {

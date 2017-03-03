@@ -6,8 +6,8 @@
 
     .coachOuter {
       width:100%;
-      
-      } 
+      overflow-x: auto;
+    } 
       
     .school {
       background: rgba(102, 175, 80, .6);
@@ -204,18 +204,12 @@
         color: white;
     }
     
-     @media only screen and (max-width: 758px) {
+      
+@media only screen and (max-width: 758px) {
         body {
             font-size: 85%;
-            width: 800px;
         }
-/*
-        button {
-            font-size: 75%;
-            padding: 1px;
-        }
-*/
-       
+
     button {
       font-family: "Benton Sans", sans-serif;
       color: #000000;
@@ -230,51 +224,31 @@
       text-decoration: none;
       display: inline-block;
     }
-       
-       
+    
     th {
       text-align:left;
       font-weight: bold;
       font-size: .4em;
       min-width: 11px;
     }
-       
-       
-        .rectangles {
-            width: 12px;
-            height: 12px;
-        }
+
+    .rectangles {
+      width: 12px;
+      height: 12px;
     }
+}
     
       
-   @media only screen and (max-width: 500px) {
-     
-     
-     
-      }     
-      
-      
-      
-      
-      
-      
-      
-  @media only screen and (max-width: 500px) {
-/*
+  @media only screen and (max-width: 600px) {
+    
       table {
-          font-size: 95%;
-          width: 500px;
+          width: 100%;
       }
+    
       body {
-          width: 500px;
+        font-size:1em;
       }
-*/
-/*
-      button {
-          font-size: 100%;
-          padding: 1px;
-      }
-*/
+
       h2 {
           font-size: 95%;
       }
@@ -289,27 +263,27 @@
           display: none;
       }
     
+      th {
+      text-align:left;
+      font-weight: bold;
+      font-size: .5em;
+      min-width: 2em;
+      }    
 
-  
-/*    body {width:100%;margin:10px auto;}*/
+      #button-wrapper {float:left;width:100%;margin:0;}
 
-    #button-wrapper {float:left;width:100%;margin:0;}
+      #square-player {margin-left:1em;}
 
-    #square-player {margin-left:1em;}
+      .keyBlock {float:left;width:100%;margin: 0 auto .5em auto;}
 
-    .keyBlock {float:left;width:100%;margin: 0 auto .5em auto;}
-  
-    .coachKeys {font-size:.85em;}
+      .coachKeys {font-size:.85em;font-size:.7em;}
 
-    .btnBlock {float:left;width:100%;margin-bottom:0em;}   
+      .btnBlock {float:left;width:100%;margin-bottom:1em;}   
 
-    button {margin-bottom:.5em;}  
+      button {margin-bottom:.5em;font-size:.6em;}  
 
-    #chart {display:block;min-height:300px;}  
-  
+      #chart {display:block;min-height:300px;}  
 
-    
-    
   }
       
       
