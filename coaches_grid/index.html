@@ -97,6 +97,8 @@
     #square-none {
       background: #fff;
       margin-left:1.5em;
+      width: 1.1em;
+      height: 1.1em;
       border: 1px solid #999;
     } 
       
@@ -204,6 +206,8 @@
         color: white;
     }
     
+    p.mobileComment {display:none;}
+      
       
 @media only screen and (max-width: 758px) {
         body {
@@ -236,6 +240,9 @@
       width: 12px;
       height: 12px;
     }
+  
+      p.mobileComment {display:none;}
+  
 }
     
       
@@ -255,6 +262,11 @@
       .legend {
           font-size: 100%;
       }
+    
+      #container {
+      height:450px;
+      }
+    
       .rectangles {
           width: 7px;
           height: 7px;
@@ -264,10 +276,11 @@
       }
     
       th {
+      font-family: Arial Narrow,Arial,sans-serif;  
       text-align:left;
       font-weight: bold;
-      font-size: .5em;
-      min-width: 2em;
+      font-size: .8em;
+      min-width: 1.5em;
       }    
 
       #button-wrapper {float:left;width:100%;margin:0;}
@@ -276,14 +289,16 @@
 
       .keyBlock {float:left;width:100%;margin: 0 auto .5em auto;}
 
-      .coachKeys {font-size:.85em;font-size:.7em;}
+      .coachKeys {font-size:.85em;font-size:.6em;}
 
       .btnBlock {float:left;width:100%;margin-bottom:1em;}   
 
-      button {margin-bottom:.5em;font-size:.6em;}  
+      button {margin-bottom:.5em;font-size:.6em;padding-left:8px;padding-right:8px;}  
 
       #chart {display:block;min-height:300px;}  
 
+    
+    p.mobileComment {display:block;font-size:.7em;}
   }
       
       
@@ -329,6 +344,7 @@
         </div>  
     </div>
 
+<p class="mobileComment">Swipe right to see entire chart</p>
 
     <div id="container"></div>
     <div class="footnote">Each column includes the schools that were in the conferences for that year. Each year represents the year the season began. For example, the column marked '80 represents the 1980-1981 season. Schools in the Big 8, which became the Big 12 in 1996, are included under the Big 12. Graphic by Ethan Nelson, a University of Minnesota student reporter on assignment for Star Tribune.</div>
